@@ -23,15 +23,7 @@ function App() {
         setIsLoading(false);
       }catch(e){
         console.error(e);
-      }
-
-      // try{
-      //   let snacks = await SnackOrBoozeApi.getSnacks();
-      //   setSnacks(snacks);
-      //   setIsLoading(false);
-      // }catch(e){
-      //   console.error(e);
-      // }
+      }    
 
     }
     getSnacks();
@@ -97,7 +89,7 @@ function App() {
 
             <Route>
               <Route
-                path="/"
+                path="*"
                 element={<p>Hmmm. I can't seem to find what you want.</p>}
               ></Route>
             </Route>
