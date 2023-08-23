@@ -13,7 +13,7 @@ Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
 Open another terminal in your project directory to run front-end:
 
-### `npm run start-fe`👍
+### `npm run start-fe`
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
