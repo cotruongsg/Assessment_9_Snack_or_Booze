@@ -27,6 +27,13 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "333",
+      "name": "333",
+      "description": "Beer of Viet Nam",
+      "recipe": "Rice",
+      "serve": "with ice-cold"
     }
   ],
   "snacks": [
@@ -50,6 +57,13 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
+    },
+    {
+      "id": "Oshi",
+      "name": "Oshi",
+      "description": "Snack of Viet Nam",
+      "recipe": "Dry potatoes",
+      "serve": "USA"
     }
   ]
 }

@@ -27,7 +27,7 @@ function App() {
 
     }
     getSnacks();
-  }, []);
+  }, snacks);
 
   useEffect(() => {
     async function getDrinks() {
@@ -36,7 +36,7 @@ function App() {
       setIsLoading(false);
     }
     getDrinks()
-  }, []);
+  }, drinks);
 
   if (isLoading) {
     return <p>Loading &hellip;</p>;

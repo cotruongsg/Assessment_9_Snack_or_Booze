@@ -10,16 +10,54 @@ function AddItemForm ({addFoods, category}){
       serve: "",
     });
     const navigate = useNavigate();
-    function handleSubmit (e){
-        e.preventDefault();
-        addFoods({form});
-        navigate("/");
+    // function handleSubmit (e){
+    //     e.preventDefault();
+    //     addFoods({form});
+    //     navigate("/");
+    // }
+
+    // Create a new object with only the desired properties
+    const dataToSend = {
+      id : form.name,
+      name: form.name,
+      description: form.description,
+      recipe: form.recipe,
+      serve: form.serve,
+    };
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+  
+      try {
+        // Make a POST request to add the new food item
+        const response = await fetch(`http://localhost:4000/${category}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dataToSend),
+        });
+  
+        if (response.ok) {
+          // Update your local state with the new item
+          addFoods({ form });
+  
+          // Navigate to the homepage
+          navigate("/");
+        } else {
+          console.error("Failed to add food item");
+        }
+      } catch (error) {
+        console.error("Error adding food item:", error);
+      }
     }
+
     function handleChange (e){
         e.persist();
         setForm(f => ({...f, [e.target.name]: e.target.value }));
     }
     const { foodType, name, description, recipe, serve } = form;
+   
     return (
       <div>
         <form onSubmit={handleSubmit}>
